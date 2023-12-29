@@ -112,6 +112,12 @@ export default function Home() {
       <main className="ml-[5vw] p-4 mt-[5vh] bg-white rounded-xl absolute z-50 w-[90vw]">
         <section>
           <div className="p-3">
+          <div className="flex flex-col">
+            <h3 className="font-bold text-xl ">Career</h3>
+            <p>SocioSaints is a dynamic and innovative branding, marketing, and event management company dedicated to providing comprehensive 
+              and tailored solutions to enhance the visibility and success of our clients. With a passion for creativity and a commitment to excellence,
+               we specialize in crafting unique and memorable brand experiences that resonate with target audiences and leave a lasting impression.</p>
+          </div>
             <div>
               <label className="text-2xl font-bold ">
                 <span className=" text-red-500">Internship </span> Request Form
@@ -188,101 +194,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="mt-[4vh] ml-[7vw] bg-red-600 h-[1px] w-[70vw] flex justify-center"></div>
-            <div className="mt-[2vh] text-center flex flex-col ">
-              <h2 className=" text-2xl ">
-                Please pay the registration fees to the following Bank Account
-              </h2>
-              <div className="flex  pt-[2vh] ">
-                <div className="flex flex-col justify-start text-start pl-[3vh]  space-y-2">
-                  <label className="text-lg ">
-                    Bank Name :{" "}
-                    <span className="font-bold">Kotak Mahindra Bank</span>
-                  </label>
-                  <label className="text-lg ">
-                    Account Holder Name :{" "}
-                    <span className="font-bold">
-                      Lorence Jayanand Raj Solay
-                    </span>
-                  </label>
-                  <label className="text-lg ">
-                    Account Number :{" "}
-                    <span className="font-bold">1112395954</span>
-                  </label>
-                  <label className="text-lg ">
-                    IFSC Code : <span className="font-bold">KKBK0007453</span>
-                  </label>
-                  <label className="text-lg">
-                    You may even forward to 8977362436(Paytm / Phone Pay /
-                    Google Pay)
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div className="mt-[4vh] ml-[7vw] bg-red-600 h-[1px] w-[70vw] flex justify-center"></div>
-            <div className="mt-[2vh] text-center flex flex-col ">
-              <h2 className=" text-2xl ">Instructions to the candidates</h2>
-              <div className="pt-[2vh] pr-[2vh]">
-                <div className="flex flex-col justify-start text-start pl-[3vh] pt-[2vh]  space-y-2">
-                  <label className="font-bold text-xl">
-                    Step 1 :{" "}
-                    <span className="font-normal">
-                      Take print of this copy and sign wherever required{" "}
-                    </span>
-                  </label>
-                  <label className="font-bold text-xl">
-                    Step 2 :{" "}
-                    <span className="font-normal">
-                      Pay the refundable* Registration fee(Rs 500/-) into the
-                      above mentioned account and take print copy of the payment
-                      reciept{" "}
-                    </span>
-                  </label>
-                  <label className="font-bold text-xl">
-                    Step 3 :{" "}
-                    <span className="font-normal">
-                      Take a picture of your identity Card(Collage ID)
-                    </span>
-                  </label>
-                  <label className="font-bold text-xl">
-                    Step 4 :{" "}
-                    <span className="font-normal">
-                      Open the site agaibn and ogin with your credentials, that
-                      you entered while registration
-                    </span>
-                  </label>
-                  <label className="font-bold text-xl">
-                    Step 5 :{" "}
-                    <span className="font-normal">
-                      upload the copies of document mentioned in above steps
-                      1,2,3. Upon submit of document after login, your payment
-                      shall be verified
-                    </span>
-                  </label>
-                  <label className="font-bold text-xl">
-                    Step 6 :{" "}
-                    <span className="font-normal">
-                      Upon successful verification, your intership Offer Letter
-                      Shall be mailed to your register mail ID.
-                    </span>
-                  </label>
-                  <label className="font-bold text-xl">
-                    Step 7 :{" "}
-                    <span className="font-normal">
-                      Submit the uploaded document to our Manger and your
-                      intership will start right away
-                    </span>
-                  </label>
-                </div>
-                <h2 className="text-xl pt-[2vh]">
-                  We Welcome you to our family.
-                </h2>
-              </div>
-            </div>
-            <div className="flex justify-between mt-[6vh] pl-[4vh] pr-[4vh] ">
-              <h3 className="flex text-xl">Sd /-</h3>
-              <h3 className="flex text-2xl">Application's Signature</h3>
-            </div>
+            
           </div>
         </section>
       </main>
