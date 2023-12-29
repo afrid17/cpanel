@@ -7,6 +7,7 @@ import { CiBank } from "react-icons/ci";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
 import { MdOutlineFileUpload } from "react-icons/md";
 import connectMongoDb from "@/libs/dataBase/mongoDb";
 import axios from "axios";
@@ -119,6 +120,9 @@ export default function Home() {
   let [emailId, updateEmailID] = useState();
   let [photo, updatePhoto] = useState();
   let [idPhoto, updateIdPhoto] = useState();
+  let [password, updatePassword] = useState();
+  let [reEnterPassword, updateReEnterPassword] = useState();
+  
   return (
     <>
       <div className=" fixed top-0 ">
@@ -129,12 +133,10 @@ export default function Home() {
       </div>
       <main className="ml-[5vw] p-4 mt-[5vh] bg-white rounded-xl absolute z-50 w-[90vw]">
         <section>
-          <div>
-            
-          </div>
+          
           <div className="p-3">
-            <div className="flex  items-center justify-between ">
-              <div className="flex flex-col space-x-4 w-[50vw]">
+            <div className="flex  items-center justify-between mt-[3vh] sm:flex sm:flex-col ">
+              <div className="flex flex-col space-x-4 w-[50vw] sm:w-[90vw] sm:p-4">
                 <h3 className="font-bold text-2xl  ">Career</h3>
                 <p className="pt-3 flexx ">
                   SocioSaints is a dynamic and innovative branding, marketing,
@@ -149,33 +151,34 @@ export default function Home() {
               <div>
                 <img
                   src="careerImage.webp"
-                  className="flex obejct-cover rounded-xl pr-[6vh] w-[30vw] h-[30vh] "
+                  className="flex obejct-cover rounded-xl pr-[6vh] w-[30vw] h-[30vh] sm:w-[100vw] sm:pt-8  sm:rounded-none "
                 />
               </div>
             </div>
-            <div className=" pl-[3vh] mb-[5vh] flex w-[90vh] justify-between  px-10 py-4 bg-gray-100 rounded-md mt-[5vh] ml-[3vh]" >
-              <div className="flex flex-col space-y-3 ">
-                <h1 className="font-bold text-xl border-b border-black">Criteria</h1>
-                <h2 className="text-xl font-thin ">Eligibility</h2>
-                <h2 className="text-xl font-thin">Duration</h2>
-                <h2 className="text-xl font-thin">StiPend</h2>
-                <h2 className="font-bold text-xl">Reg.Fee</h2>
+            <div className=" pl-[3vh] mb-[5vh] flex w-[90vh] justify-between sm:w-fit sm:flex   px-10 py-4 bg-gray-100 rounded-md mt-[5vh] ml-[3vh] sm:p-3 sm:m-0 sm:text-xs
+            sm:mt-[5vh] sm:mb-[4vh] " >
+              <div className="flex flex-col space-y-3 sm:text-xs sm:w-[22vw] sm:text-center sm:flex sm:items-center sm:justify-between">
+                <h1 className="font-bold sm:text-xs text-xl border-b border-black w-fit">Criteria</h1>
+                <h2 className="text-xl sm:text-xs font-thin ">Eligibility</h2>
+                <h2 className="text-xlsm:text-xs font-thin">Duration</h2>
+                <h2 className="text-xl font-thin sm:text-xs">StiPend</h2>
+                <h2 className="font-bold text-xl sm:text-xs">Reg.Fee</h2>
                 
               </div>
-              <div className="flex flex-col space-y-3 ">
-                <h1 className="font-bold text-xl border-b w-fit border-black">Organiser</h1>
-                <h2 className="text-xl font-thin">MBA FINAL YEAR</h2>
-                <h2 className="text-xl font-thin">100 days</h2>
-                <h2 className="text-xl font-thin">10,000 /-</h2>
-                <h2 className="font-bold text-xl">500 /-</h2>
+              <div className="flex flex-col space-y-3 sm:pl-4 sm:w-[23vw] sm:text-center sm:flex sm:items-center sm:justify-center">
+                <h1 className="font-bold sm:text-xs text-xl border-b w-fit border-black">Organiser</h1>
+                <h2 className="text-xl sm:text-xs font-thin">MBA FINAL YEAR</h2>
+                <h2 className="text-xl sm:text-xs font-thin">100 days</h2>
+                <h2 className="text-xl sm:text-xs font-thin">10,000 /-</h2>
+                <h2 className="font-bold sm:text-xs text-xl">500 /-</h2>
                 
               </div>
-              <div className="flex flex-col space-y-3 ">
-                <h1 className="font-bold text-xl border-b w-fit border-black">Criteria</h1>
-                <h2 className="text-xl font-thin">GRAND FINAL YEAR</h2>
-                <h2 className="text-xl font-thin">100 days</h2>
-                <h2 className="text-xl font-thin">5,000 /-</h2>
-                <h2 className="font-bold text-xl">500 /-</h2>
+              <div className="flex flex-col space-y-3 sm:pl-4 sm:w-[23vw] sm:text-center sm:flex sm:items-center sm:justify-center ">
+                <h1 className="font-bold sm:text-xs text-xl border-b w-fit border-black">Criteria</h1>
+                <h2 className="text-xl sm:text-xs font-thin">GRAND FINAL YEAR</h2>
+                <h2 className="text-xl sm:text-xs font-thin">100 days</h2>
+                <h2 className="text-xl sm:text-xs font-thin">5,000 /-</h2>
+                <h2 className="font-bold sm:text-xs text-xl">500 /-</h2>
                 
               </div>
             </div>
@@ -184,7 +187,7 @@ export default function Home() {
                 <span className=" text-red-500">Internship </span> Request Form
               </label>
             </div>
-            <div className="flex pt-14 w-full justify-evenly space-x-12 pl-6 pr-6 ">
+            <div className="flex sm:flex sm:flex-col  pt-14 w-full justify-evenly space-x-12 sm:space-x-0 pl-6 sm:pl-3 sm:pt-4 pr-6 sm:pr-0 ">
               <div className="flex flex-col space-y-6 w-full">
                 <TextFiled
                   Icon={AiOutlineFileSearch}
@@ -241,7 +244,7 @@ export default function Home() {
                   </i>
                 </div>
               </div>
-              <div className="flex flex-col space-y-6 w-full">
+              <div className="flex flex-col space-y-6 w-full sm:flex sm:flex-col sm:p-0 sm:space-y-6 sm:pt-4 sm:float-start sm:-ml-[5vh]">
                 <Adress Icon={IoLocationOutline} value={"Adress"} />
                 <TextFiled
                   Icon={FaPhoneAlt}
@@ -252,6 +255,16 @@ export default function Home() {
                   Icon={MdEmail}
                   value={"Email ID"}
                   onChangeFunction={updateEmailID}
+                />
+                <TextFiled
+                  Icon={RiLockPasswordLine}
+                  value={"Password"}
+                  onChangeFunction={updatePassword}
+                />
+                <TextFiled
+                  Icon={MdEmail}
+                  value={"Re Enter Password"}
+                  onChangeFunction={updateReEnterPassword}
                 />
 
                 <div
